@@ -1,0 +1,47 @@
+{
+  "name": "@dhx/trial-react-gantt",
+  "version": "9.1.4",
+  "private": true,
+  "main": "dist/dhtmlxgantt.react.es.js",
+  "types": "dist/dhtmlxgantt.react.es.d.ts",
+  "type": "module",
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.17.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.16",
+    "globals": "^15.14.0",
+    "lodash-es": "^4.17.21",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rollup-plugin-dts": "^6.2.1",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.5",
+    "vite-plugin-dts": "^4.5.0"
+  },
+  "scripts": {
+    "build": "vite build",
+    "bundle:dts": "rollup -c rollup.config.dts.js",
+    "build:all": "yarn build && yarn bundle:dts",
+    "watch": "vite build --watch",
+    "generate:templates": "tsx scripts/generate-react-templates.ts"
+  },
+  "description": "DHTMLX Gantt for React",
+  "deployTag": "react-gantt",
+  "productTag": "gantt",
+  "license": "SEE LICENSE IN license.txt",
+  "publishConfig": {
+    "registry": "https://npm.dhtmlx.com"
+  }
+}

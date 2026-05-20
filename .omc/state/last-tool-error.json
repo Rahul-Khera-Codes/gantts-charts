@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"cd /home/node/shelf-Gannt/gantt_trial_react/react/samples-public && npm install 2>&1\",\"timeout\":180000,\"description\":\"Install dependencies for the DHTMLX Gantt React samples\"}",
+  "error": "Exit code 1\nnpm error code E404\nnpm error 404 Not Found - GET https://registry.npmjs.org/@dhx%2ftrial-react-gantt - Not found\nnpm error 404\nnpm error 404  '@dhx/trial-react-gantt@^9.1.4' is not in this registry.\nnpm error 404\nnpm error 404 Note that you can also install from a\nnpm error 404 tarball, folder, http url, or git url.\nnpm error A complete log of this run can be found in: /home/node/.npm/_logs/2026-04-30T05_48_31_059Z-debug-0.log",
+  "timestamp": "2026-04-30T05:48:49.980Z",
+  "retry_count": 1
+}
