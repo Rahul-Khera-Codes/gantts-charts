@@ -3,6 +3,7 @@ import KeyboardDoubleArrowLeftIcon from '@mui/icons-material/KeyboardDoubleArrow
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import resourceVueLogo from '../../../assets/Resource Vue Logo.svg';
+import resourceVueLogoSmall from '../../../assets/logo small copy.png';
 import { sidebarSections } from '../data/navigation';
 import SidebarIcon from './SidebarIcon';
 
@@ -27,9 +28,12 @@ export default function AppSidebar() {
             width={199}
             height={33}
           />
-          <span className="rv-logo-compact" aria-hidden="true">
-            R
-          </span>
+          <img
+            src={resourceVueLogoSmall}
+            alt=""
+            aria-hidden="true"
+            className="rv-logo-compact"
+          />
         </div>
         <button
           type="button"

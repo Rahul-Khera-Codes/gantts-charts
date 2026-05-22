@@ -1,25 +1,21 @@
 import { useState, useRef, useEffect } from 'react';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import AddIcon from '@mui/icons-material/Add';
+import SubdirectoryArrowRightIcon from '@mui/icons-material/SubdirectoryArrowRight';
 
 const menuItems = [
   { id: 'edit', label: 'Edit', icon: <EditOutlinedIcon fontSize="small" /> },
-  { id: 'wp', label: 'Add Work Package', icon: <AddOutlinedIcon fontSize="small" /> },
-  { id: 'task', label: 'Add Task', icon: <AddOutlinedIcon fontSize="small" /> },
-  { id: 'go-wp', label: 'Go to Work Packages', icon: <ArrowForwardIcon fontSize="small" /> },
-  { id: 'go-tasks', label: 'Go to Tasks', icon: <ArrowForwardIcon fontSize="small" /> },
-  { id: 'go-stages', label: 'Go to Stages', icon: <ArrowForwardIcon fontSize="small" /> },
-  { id: 'go-gantt', label: 'Go to Gantt View', icon: <ArrowForwardIcon fontSize="small" /> },
+  { id: 'wp', label: 'Add Work Package', icon: <AddIcon fontSize="small" /> },
+  { id: 'task', label: 'Add Task', icon: <AddIcon fontSize="small" /> },
+  { id: 'go-wp', label: 'Go to Work Packages', icon: <SubdirectoryArrowRightIcon fontSize="small" /> },
+  { id: 'go-tasks', label: 'Go to Tasks', icon: <SubdirectoryArrowRightIcon fontSize="small" /> },
+  { id: 'go-stages', label: 'Go to Stages', icon: <SubdirectoryArrowRightIcon fontSize="small" /> },
+  { id: 'go-gantt', label: 'Go to Gantt View', icon: <SubdirectoryArrowRightIcon fontSize="small" /> },
 ];
 
-interface RowActionsMenuProps {
-  defaultOpen?: boolean;
-}
-
-export default function RowActionsMenu({ defaultOpen = false }: RowActionsMenuProps) {
-  const [open, setOpen] = useState(defaultOpen);
+export default function RowActionsMenu() {
+  const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

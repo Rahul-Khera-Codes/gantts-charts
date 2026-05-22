@@ -98,7 +98,7 @@ body{
 }
 
 .sidebar-title{
-  color: var(--dhxgantt-text-title-color);
+  color: rgba(0, 0, 0, 0.6);
   padding: 0 1rem 1rem;
   font-size: 16px;
   font-weight: var(--dhxgantt-font-weight-medium);
@@ -124,7 +124,7 @@ body{
 }
 
 .sidebar-link {
-  color: var(--dhxgantt-link-color);
+  color: rgba(0, 0, 0, 0.6);
 
   cursor: pointer;
   font-weight: var(--dhxgantt-font-weight-normal);

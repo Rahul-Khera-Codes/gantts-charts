@@ -12,8 +12,8 @@ export const sidebarSections: NavSection[] = [
     title: 'Projects',
     items: [
       { id: 'proj-dashboard', label: 'Dashboard', icon: 'dashboard' },
-      { id: 'my-projects', label: 'My Projects', icon: 'person', active: true },
-      { id: 'group-projects', label: 'Group Projects', icon: 'group' },
+      { id: 'my-projects', label: 'My Projects', icon: 'my-projects', active: true },
+      { id: 'group-projects', label: 'Group Projects', icon: 'group-projects' },
     ],
   },
   {
@@ -21,8 +21,8 @@ export const sidebarSections: NavSection[] = [
     title: 'Work Packages',
     items: [
       { id: 'wp-dashboard', label: 'Dashboard', icon: 'dashboard' },
-      { id: 'my-wp', label: 'My Work Packages', icon: 'person' },
-      { id: 'group-wp', label: 'Group Work Packages', icon: 'group' },
+      { id: 'my-wp', label: 'My Work Packages', icon: 'my-wp' },
+      { id: 'group-wp', label: 'Group Work Packages', icon: 'group-wp' },
       { id: 'external', label: 'External Requests', icon: 'external' },
       { id: 'allocation', label: 'Resource Allocation', icon: 'allocation' },
     ],
@@ -32,10 +32,10 @@ export const sidebarSections: NavSection[] = [
     title: 'Tasks',
     items: [
       { id: 'heatmap', label: 'Heatmap', icon: 'heatmap' },
-      { id: 'my-tasks', label: 'My Tasks', icon: 'person' },
-      { id: 'group-tasks', label: 'Group Tasks', icon: 'group' },
-      { id: 'my-timesheet', label: 'My Timesheet', icon: 'timesheet' },
-      { id: 'group-timesheet', label: 'Group Timesheet', icon: 'timesheet' },
+      { id: 'my-tasks', label: 'My Tasks', icon: 'my-tasks' },
+      { id: 'group-tasks', label: 'Group Tasks', icon: 'group-tasks' },
+      { id: 'my-timesheet', label: 'My Timesheet', icon: 'my-timesheet' },
+      { id: 'group-timesheet', label: 'Group Timesheet', icon: 'group-timesheet' },
     ],
   },
 ];
