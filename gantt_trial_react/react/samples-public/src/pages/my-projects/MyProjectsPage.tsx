@@ -33,7 +33,10 @@ export default function MyProjectsPage() {
             onLevelChange={setLevel}
           />
           {activeView === 'list' ? (
-            <ProjectsTable onOpenEdit={setEditingProject} />
+            <ProjectsTable
+              onOpenEdit={setEditingProject}
+              onGoToGantt={() => setActiveView('gantt')}
+            />
           ) : (
             <ProjectsGantt level={level} onOpenBreakdown={setBreakdownProject} />
           )}

@@ -16,6 +16,7 @@ import RowActionsMenu from './RowActionsMenu';
 
 interface ProjectsTableProps {
   onOpenEdit?: (project: Project) => void;
+  onGoToGantt?: (project: Project) => void;
 }
 
 type SortDirection = 'asc' | 'desc' | null;
@@ -48,7 +49,7 @@ function SortIcon({ direction }: { direction: SortDirection }) {
   );
 }
 
-export default function ProjectsTable({ onOpenEdit }: ProjectsTableProps) {
+export default function ProjectsTable({ onOpenEdit, onGoToGantt }: ProjectsTableProps) {
   const [sortKey, setSortKey] = useState<string>('status');
   const [sortDirection, setSortDirection] = useState<SortDirection>('asc');
 
@@ -151,7 +152,7 @@ export default function ProjectsTable({ onOpenEdit }: ProjectsTableProps) {
                 </div>
               </td>
               <td className="rv-col-actions">
-                <RowActionsMenu />
+                <RowActionsMenu onGoToGantt={() => onGoToGantt?.(project)} />
               </td>
             </tr>
           ))}

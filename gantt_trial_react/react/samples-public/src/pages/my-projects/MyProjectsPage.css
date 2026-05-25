@@ -1238,15 +1238,22 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 24px;
+  height: 20.5px;
   background: #d8c9f7;
   border-radius: 4px;
+  padding: 2px;
+  box-sizing: border-box;
   overflow: visible;
   display: flex;
   align-items: center;
   cursor: grab;
   touch-action: none;
   user-select: none;
+  transition: filter 120ms ease;
+}
+
+.rv-gantt-bar:hover {
+  filter: brightness(0.97);
 }
 
 .rv-gantt-bar:active,
@@ -1273,12 +1280,8 @@
 }
 
 .rv-gantt-bar-progress {
-  height: 100%;
+  height: 16px;
   background: #7c3aed;
-  border-radius: 4px 0 0 4px;
-}
-
-.rv-gantt-bar-progress[style*="width: 100%"] {
   border-radius: 4px;
 }
 
@@ -1794,8 +1797,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 22px;
+  height: 20.5px;
   border-radius: 4px;
+  padding: 2px;
+  box-sizing: border-box;
   overflow: visible;
   display: flex;
   align-items: center;
@@ -1815,11 +1820,7 @@
 .rv-bd-bar--task .rv-bd-bar-progress { background: #7a3eb1; }
 
 .rv-bd-bar-progress {
-  height: 100%;
-  border-radius: 4px 0 0 4px;
-}
-
-.rv-bd-bar-progress[style*="width: 100%"] {
+  height: 16px;
   border-radius: 4px;
 }
 

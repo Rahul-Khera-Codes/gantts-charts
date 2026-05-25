@@ -14,7 +14,11 @@ const menuItems = [
   { id: 'go-gantt', label: 'Go to Gantt View', icon: <SubdirectoryArrowRightIcon fontSize="small" /> },
 ];
 
-export default function RowActionsMenu() {
+interface RowActionsMenuProps {
+  onGoToGantt?: () => void;
+}
+
+export default function RowActionsMenu({ onGoToGantt }: RowActionsMenuProps = {}) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -29,6 +33,13 @@ export default function RowActionsMenu() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [open]);
 
+  const handleSelect = (id: string) => {
+    setOpen(false);
+    if (id === 'go-gantt') {
+      onGoToGantt?.();
+    }
+  };
+
   return (
     <div className="rv-row-menu" ref={ref}>
       <button
@@ -42,7 +53,12 @@ export default function RowActionsMenu() {
       {open && (
         <div className="rv-row-menu-dropdown">
           {menuItems.map((item) => (
-            <button key={item.id} type="button" className="rv-row-menu-item">
+            <button
+              key={item.id}
+              type="button"
+              className="rv-row-menu-item"
+              onClick={() => handleSelect(item.id)}
+            >
               <span className="rv-row-menu-item-icon">{item.icon}</span>
               <span>{item.label}</span>
             </button>
